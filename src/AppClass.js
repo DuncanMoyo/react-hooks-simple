@@ -4,19 +4,33 @@ class App extends Component {
   state = {
     count: 0,
     isOn: false,
+    x: null,
+    y: null,
   };
 
-/////////////////////////////////
-// scrapped
+  /////////////////////////////////
+  // scrapped
   // componentDidMount() {
+  //   document.title = `You definitely clicked this ${this.state.count} times`
+  //   window.addEventListener('mousemove', this.handleMouseMove)
+  // }
+
+  // componentDidUpdate() {
   //   document.title = `You definitely clicked this ${this.state.count} times`
   // }
 
-  // componentDidiUpdate() {
-  //   document.title = `You definitely clicked this ${this.state.count} times`
+  // componentWillUnMount() {
+  //   window.removeEventListener('mousemove', this.handleMouseMove)
   // }
-  
-//////////////////////////////////
+
+  //////////////////////////////////
+
+  handleMouseMove = (event) => {
+    this.setState({
+      x: event.pageX,
+      y: event.pageY,
+    });
+  };
 
   incrementCount = () => {
     this.setState((prevState) => ({
@@ -27,7 +41,7 @@ class App extends Component {
   toggleLight = () => {
     this.setState((prevState) => ({
       isOn: !prevState.isOn,
-    }));
+    }))
   };
 
   render() {
@@ -41,10 +55,18 @@ class App extends Component {
         <h2>Toggle Light</h2>
         <div
           onClick={this.toggleLight}
-          style={{ height: "50px", width: "50px", background: this.state.isOn ? 'yellow': "grey" }}
+          style={{
+            height: "50px",
+            width: "50px",
+            background: this.state.isOn ? "yellow" : "grey",
+          }}
         ></div>
+
+        <h2>Mouse Position</h2>
+        <p>X Position: {this.state.x}</p>
+        <p>Y Position: {this.state.y}</p>
       </>
-    );
+    )
   }
 }
 
