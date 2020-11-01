@@ -6,6 +6,18 @@ class App extends Component {
     isOn: false,
   };
 
+/////////////////////////////////
+// scrapped
+  // componentDidMount() {
+  //   document.title = `You definitely clicked this ${this.state.count} times`
+  // }
+
+  // componentDidiUpdate() {
+  //   document.title = `You definitely clicked this ${this.state.count} times`
+  // }
+  
+//////////////////////////////////
+
   incrementCount = () => {
     this.setState((prevState) => ({
       count: prevState.count + 1,
