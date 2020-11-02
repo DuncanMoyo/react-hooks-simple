@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import AppClass from './AppClass';
 // import AppFunction from './AppFunction';
-import Login from './Login';
+// import Login from './Login';
+import Register from './Register';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,7 +11,8 @@ ReactDOM.render(
     {/* <AppClass /> */}
     {/* <AppFunction /> */}
 
-    <Login />
+    {/* <Login /> */}
+    <Register />
   </React.StrictMode>,
   document.getElementById('root')
 );
