@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppClass from './AppClass';
-import AppFunction from './AppFunction';
+// import AppClass from './AppClass';
+// import AppFunction from './AppFunction';
+import Login from './Login';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <AppClass /> */}
-    <AppFunction />
+    {/* <AppFunction /> */}
+
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
